@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>hello</title>
-</head>
-<body>
-  <h3>hello user</h3>
+{% extends 'base.html' %}
+{% block title %}hello{% endblock %}
+    {% block content %}
+        {% if name == 'admin' %}
+            <p>error</p>
+        {% endif %}
+      <h3>hello {{ name|upper }}</h3>
 
-<h1>
-    سلام این سایت تست است
-</h1>
-</body>
-</html>
+    <h1>
+        سلام  {{ name }}این سایت تست است
+    </h1>
+
+{% endblock %}
